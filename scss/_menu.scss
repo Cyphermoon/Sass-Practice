@@ -1,0 +1,59 @@
+.menu_btn{
+    position: absolute;
+    z-index: 5;
+    top:1em;
+    right: 1em;
+    width: 28px;
+    height: 20px;
+    cursor:pointer;
+    background-color: transparent;
+
+    &_burger{
+        position: absolute;
+        top: .4em;
+        right: 0;
+        width: 100%;
+        height: 3px;
+        background-color: set_text_color($primary_color);
+        @include transition_ease;
+
+        &::after{
+            content: ""; 
+            position: absolute;
+            top: 8px;
+            left: 0;
+            width: 80%;
+            height: 3px;
+            background-color: set_text_color($primary_color);
+            @include transition_ease;
+
+        }
+
+        &::before{
+            content: ""; 
+            position: absolute;
+            top: -8px;
+            right: 0;
+            width: 100%;
+            height: 3px;
+            background-color: set_text_color($primary_color);
+             @include transition_ease;
+
+
+        }
+
+        &.open{
+            transform: rotate(720deg);
+            background-color: transparent;
+
+            &::after{
+                width: 100%;
+                transform: rotate(45deg);
+            }
+
+            &::before{
+                transform: rotate(-45deg) translate(-10px, 10px)
+            }
+        }
+    }
+}

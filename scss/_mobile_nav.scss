@@ -1,0 +1,49 @@
+@mixin flexColumn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: $primary_color;
+    visibility: hidden;
+    transform: translateY(-100%);
+    @include transition_ease;
+    @include flexColumn();
+
+    &.open{
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    ul{
+        list-style-type: none;
+        @include flexColumn();
+        transform: translateX(100vw);
+        transition: transform 500ms ease-in-out 300ms;
+
+        &.open{
+         transform: translateX(0);
+        }
+
+        li{
+            font-size: x-large;
+            margin-bottom: .9em;
+
+            &.open{
+                color:red;
+            }
+        }
+        
+        li > a.active{
+            color: $secondary_color;
+        }
+    }
+}

@@ -1,0 +1,32 @@
+.home{
+    height: 100%;
+    padding-top: 35vh;
+    text-align: center;
+    align-items: center;
+    overflow: hidden;
+    background-image: url("../img/model-1.jpg") ,
+    linear-gradient(to left,
+    rgba($primary_color, .4),
+    rgba($primary_color, .9));
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+
+    h2{
+        font-size: 1.3rem;
+    }
+
+    &_name{
+        font-size: 3.5rem;
+        font-weight: 600;
+        padding-bottom: .5em;
+        border-bottom: solid 1px set_text_color($primary_color);
+        margin-top: .5em;
+
+        &_last{
+            color: $secondary_color;
+            font-weight: 800;
+        }
+    }
+}

@@ -23,27 +23,41 @@ nav{
         transform: translateY(0);
     }
 
+    & a{
+        &:hover{
+            color:$secondary_color
+        }
+
+        &.active{
+            color: $secondary_color;
+        }
+    }
+
     ul{
         list-style-type: none;
         @include flexColumn();
-        transform: translateX(100vw);
-        transition: transform 500ms ease-in-out 300ms;
+       
 
-        &.open{
-         transform: translateX(0);
-        }
+        // &.open{
+        //  transform: translateX(0);
+        // }
 
         li{
             font-size: x-large;
             margin-bottom: .9em;
+            transform: translateX(100vw);
+            @include transition_ease;
 
-            &.open{
-                color:red;
+             &.open{
+             transform: translateX(0);
             }
         }
-        
-        li > a.active{
-            color: $secondary_color;
-        }
+    }
+}
+
+@for $i from 1 through 4 {
+    .menu_nav_item:nth-child(#{$i}){
+        transition-delay: ($i * 0.1s) + 0.15s;
+        color: black;
     }
 }

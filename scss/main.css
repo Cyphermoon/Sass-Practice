@@ -197,6 +197,86 @@ nav ul li.open {
   color: black;
 }
 
+.about_bio_image {
+  margin-bottom: 1.5rem;
+  width: 100%;
+  height: 50vh;
+  padding-bottom: 2em;
+  background-image: url("../img/model-1.jpg"), -webkit-gradient(linear, right top, left top, from(rgba(39, 39, 39, 0.4)), to(rgba(39, 39, 39, 0.9)));
+  background-image: url("../img/model-1.jpg"), linear-gradient(to left, rgba(39, 39, 39, 0.4), rgba(39, 39, 39, 0.9));
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.about_bio {
+  width: 90%;
+  line-height: 1.3;
+}
+
+.about_bio h2 {
+  margin-bottom: .5em;
+}
+
+.jobs {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  gap: 1.5em;
+  place-items: center;
+}
+
+.jobs .job {
+  background-color: #414141;
+  padding: 1em;
+  border-bottom: solid 3px #ff652f;
+  width: 90%;
+  border-radius: .5em;
+  max-width: 650px;
+}
+
+.jobs .job > * + * {
+  margin-top: .58em;
+}
+
+.jobs .job h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.jobs .job h3 {
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.jobs .job h6 {
+  font-weight: 300;
+  color: #e6e6e6;
+}
+
+.jobs .job p {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  line-height: 1.4;
+  font-size: .94rem;
+  color: #e6e6e6;
+}
+
 body {
   background-color: #272727;
   color: #fff;
@@ -212,6 +292,10 @@ h1, h2, h3 {
 a {
   color: #fff;
   text-decoration: none;
+}
+
+.text_secondary {
+  color: #ff652f;
 }
 
 header {

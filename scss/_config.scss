@@ -7,6 +7,15 @@ $secondary_color: #ff652f;
     padding: 0;
 }
 
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+@mixin space_between_small {
+    margin-top:.58em;
+}
+
 @mixin transition_ease {
     transition: all 500ms ease-in-out;
 }

@@ -39,9 +39,11 @@
 
 .jobs{
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 1.5em;
-    place-items: center;
+    justify-content: center;
+    justify-items: center;
+    width: 100%;
     
     .job{
         background-color: lighten($color: $primary_color, $amount: 10%);

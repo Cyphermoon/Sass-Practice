@@ -1,0 +1,27 @@
+.contact{
+    height: 100%;
+    padding-top: 35vh;
+    text-align: center;
+    align-items: center;
+    overflow: hidden;
+    background-image: url("../img/model-1.jpg") ,
+    linear-gradient(to left,
+    rgba($primary_color, .4),
+    rgba($primary_color, .9));
+    background-position: center top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+
+    h2{
+        font-size: 2.5rem;
+        margin-bottom: 1em;
+    }
+
+    &_list{
+        & > * + *{
+            margin-top: .98em;
+        }
+    }
+
+}

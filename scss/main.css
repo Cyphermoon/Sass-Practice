@@ -248,10 +248,14 @@ nav ul li.open {
 .jobs {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 1.5em;
-  place-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  width: 100%;
 }
 
 .jobs .job {
@@ -345,10 +349,14 @@ main {
 .project_items {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr;
-      grid-template-columns: 1fr;
+  -ms-grid-columns: (minmax(450px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   gap: 1.5em;
-  place-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  width: 100%;
 }
 
 .project_item {
@@ -419,6 +427,31 @@ main {
 
 .project_item .project_btn a:hover {
   color: #1a1a1a;
+}
+
+.contact {
+  height: 100%;
+  padding-top: 35vh;
+  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: hidden;
+  background-image: url("../img/model-1.jpg"), -webkit-gradient(linear, right top, left top, from(rgba(39, 39, 39, 0.4)), to(rgba(39, 39, 39, 0.9)));
+  background-image: url("../img/model-1.jpg"), linear-gradient(to left, rgba(39, 39, 39, 0.4), rgba(39, 39, 39, 0.9));
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1em;
+}
+
+.contact_list > * + * {
+  margin-top: .98em;
 }
 
 body {

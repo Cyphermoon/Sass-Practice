@@ -43,15 +43,7 @@
        }
 
        &_items{
-        padding: 0 .5em;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 5fr));
-        row-gap: 2em;
-        column-gap: .1em;
-        justify-content:center;
-        justify-items: center;
-        width: 100%;
-        height: auto;
+        @include grid_default;
     }
 
             
@@ -60,7 +52,8 @@
         background-color: lighten($color: $primary_color, $amount: 5%);
         padding: 1em;
         // border: solid 3px $secondary_color;
-        width: 85%;
+        width: 100%;
+        height: auto;
         border-radius: .5em;
         max-width: 650px;
         text-align: center;

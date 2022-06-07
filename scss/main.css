@@ -246,17 +246,15 @@ nav ul li.open {
 }
 
 .jobs {
-  padding: 0 .5em;
+  padding: 0 1.2em;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  -webkit-column-gap: .1em;
-          column-gap: .1em;
-  row-gap: 2em;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-grid-columns: (minmax(320px, 5fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(320px, 5fr));
+  gap: 1.75em;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   justify-items: center;
   width: 100%;
 }
@@ -265,7 +263,7 @@ nav ul li.open {
   background-color: #414141;
   padding: 1em;
   border-bottom: solid 3px #ff652f;
-  width: 85%;
+  width: 100%;
   border-radius: .5em;
   max-width: 650px;
 }
@@ -350,27 +348,25 @@ main {
 }
 
 .project_items {
-  padding: 0 .5em;
+  padding: 0 1.2em;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(350px, 5fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(350px, 5fr));
-  row-gap: 2em;
-  -webkit-column-gap: .1em;
-          column-gap: .1em;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-grid-columns: (minmax(320px, 5fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(320px, 5fr));
+  gap: 1.75em;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   justify-items: center;
   width: 100%;
-  height: auto;
 }
 
 .project_item {
   position: relative;
   background-color: #343434;
   padding: 1em;
-  width: 85%;
+  width: 100%;
+  height: auto;
   border-radius: .5em;
   max-width: 650px;
   text-align: center;
@@ -438,8 +434,12 @@ main {
 
 .contact {
   height: 100%;
-  padding-top: 35vh;
-  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -453,6 +453,8 @@ main {
 }
 
 .contact h2 {
+  position: absolute;
+  top: 25%;
   font-size: 2.5rem;
   margin-bottom: 1em;
 }
@@ -501,6 +503,18 @@ main {
   }
   .about_bio_image {
     height: 45vh;
+  }
+  .contact {
+    padding: 0 .5em;
+  }
+  .contact_list {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .contact_list > * + * {
+    margin-top: 0;
   }
 }
 

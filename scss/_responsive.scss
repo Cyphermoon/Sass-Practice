@@ -41,4 +41,17 @@
 
     }
 
+    .contact {
+         padding: 0 .5em;
+
+         &_list{
+
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            & > * + *{
+                margin-top: 0;
+            }
+        }
+    
+    }
 }

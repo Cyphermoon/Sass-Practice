@@ -16,6 +16,16 @@ img{
     margin-top:.58em;
 }
 
+@mixin grid_default {
+    padding: 0 1.2em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 5fr));
+    gap: 1.75em;
+    justify-content:start;
+    justify-items: center;
+    width: 100%;
+}
+
 @mixin transition_ease {
     transition: all 500ms ease-in-out;
 }

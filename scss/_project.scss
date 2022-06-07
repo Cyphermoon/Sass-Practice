@@ -44,8 +44,8 @@
 
        &_items{
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-        gap: 1.5em;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: min($numbers: .2em 1.5em);
         justify-content: center;
         justify-items: center;
         width: 100%;

@@ -165,7 +165,7 @@ nav ul {
 }
 
 nav ul li {
-  font-size: x-large;
+  font-size: .9rem;
   margin-bottom: .9em;
   -webkit-transform: translateX(100vw);
           transform: translateX(100vw);
@@ -349,8 +349,8 @@ main {
 .project_items {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(450px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+  -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 1.5em;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -452,6 +452,49 @@ main {
 
 .contact_list > * + * {
   margin-top: .98em;
+}
+
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 19px;
+  }
+  .menu_btn {
+    display: none;
+  }
+  nav {
+    position: relative;
+    width: 100%;
+    height: auto;
+    visibility: visible;
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    background-color: transparent;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  nav ul {
+    width: 60%;
+    max-width: 400px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  nav ul li {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  .about_bio_image {
+    height: 45vh;
+  }
 }
 
 body {

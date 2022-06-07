@@ -1,0 +1,50 @@
+
+@include media_md{
+    html{
+        font-size: 19px;
+    }
+
+    .menu_btn{
+        display: none;
+    }
+
+    nav{
+        position: relative;
+        width: 100%;
+        height: auto;
+        visibility: visible;
+        transform: translateY(0);
+        flex-direction: row;
+        background-color: transparent;
+        justify-content: flex-end;
+
+        ul {
+            width: 60%;
+            max-width: 400px;
+            flex-direction: row;
+            justify-content: space-between;
+
+            li{
+                // all: unset;
+                // font-size: medium;
+                transform: translateX(0);
+            }
+        } 
+        
+    }
+
+    .about{
+    
+        &_bio_image{
+            height: 45vh;
+        }
+
+    }
+
+    .project{
+        &_items{
+            
+        }
+    }
+
+}

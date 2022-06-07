@@ -246,11 +246,14 @@ nav ul li.open {
 }
 
 .jobs {
+  padding: 0 .5em;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 1.5em;
+  -webkit-column-gap: .1em;
+          column-gap: .1em;
+  row-gap: 2em;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -347,16 +350,20 @@ main {
 }
 
 .project_items {
+  padding: 0 .5em;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(350px, 1fr))[auto-fit];
-      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 1.5em;
+  -ms-grid-columns: (minmax(350px, 5fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(350px, 5fr));
+  row-gap: 2em;
+  -webkit-column-gap: .1em;
+          column-gap: .1em;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   justify-items: center;
   width: 100%;
+  height: auto;
 }
 
 .project_item {

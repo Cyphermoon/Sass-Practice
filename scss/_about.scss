@@ -38,9 +38,11 @@
 }
 
 .jobs{
+    padding: 0 .5em;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 1.5em;
+    column-gap: .1em;
+    row-gap: 2em;
     justify-content: center;
     justify-items: center;
     width: 100%;

@@ -43,12 +43,15 @@
        }
 
        &_items{
+        padding: 0 .5em;
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: min($numbers: .2em 1.5em);
-        justify-content: center;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 5fr));
+        row-gap: 2em;
+        column-gap: .1em;
+        justify-content:center;
         justify-items: center;
         width: 100%;
+        height: auto;
     }
 
             
